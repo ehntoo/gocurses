@@ -8,7 +8,7 @@ CGOFILES=curses.go \
 
 CGO_LDFLAGS=-lpanel -lncurses 
 
-CLEANFILES+=
+CLEANFILES+=sample
 
 include $(GOROOT)/src/Make.pkg
 

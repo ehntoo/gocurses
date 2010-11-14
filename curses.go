@@ -225,7 +225,7 @@ func (win *Window) addstr ( x,y int, str string, flags int32 ) {
 func (win *Window) Addstr(x0, y0 int, str string, flags int32, v ...interface{}) {
 	in()
 	defer out()
-	newstr := fmt.Sprintf(str, v)
+	newstr := fmt.Sprintf(str, v...)
 	win.addstr( x0, y0, newstr, flags )
 }
 
@@ -235,7 +235,7 @@ func (win *Window) Addstr(x0, y0 int, str string, flags int32, v ...interface{})
 func (win *Window) AddstrAlign(x0, y0 int, str string, flags int32, v ...interface{}) {
 	in()
 	defer out()
-	lines := strings.Split( fmt.Sprintf(str, v), "\n", -1 )
+	lines := strings.Split( fmt.Sprintf(str, v...), "\n", -1 )
 	
 	x,y := x0,y0
 	maxx,_ := win.getmax()

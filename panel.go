@@ -4,7 +4,7 @@ package curses
 // struct _win_st{};
 // #define _Bool int
 // #define NCURSES_OPAQUE 1
-// #include <ncurses/panel.h>
+// #include <panel.h>
 // #include <stdlib.h>
 import "C"
 
